@@ -19,6 +19,22 @@ namespace SupermarketRosario.Registros
             {
                 fecha.Text = DateTime.Today.ToString("yyyy-MM-dd");
                 id.Text = "0";
+
+                int idx = Utils.ToInt(Request.QueryString["id"]);
+                if (idx > 0)
+                {
+                    BLL.RepositorioBase<Usuarios> repositorio = new BLL.RepositorioBase<Usuarios>();
+                    var us = repositorio.Buscar(idx);
+
+                    if (us == null)
+                    {
+                        MostrarMensaje(TiposMensaje.Error, "Registro no encontrado");
+                    }
+                    else
+                    {
+                        LlenaCampo(us);
+                    }
+                }
             }
         }
         private void Limpiar()
