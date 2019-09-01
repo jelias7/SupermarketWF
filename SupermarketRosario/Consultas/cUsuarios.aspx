@@ -4,6 +4,16 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="panel panel-primary">
         <div class="panel-body">
+
+            <div class="form-group row">
+                <div class="col-md-2">
+                   <asp:Label ID="Desde" runat="server" Text="Desde">
+                    <asp:TextBox type="date" runat="server" ID="DesdeFecha" Class="form-control input-sm"></asp:TextBox></asp:Label>
+                    <asp:Label ID="Hasta" runat="server" Text="Hasta">
+                    <asp:TextBox type="date" runat="server" ID="HastaFecha" Class="form-control input-sm"></asp:TextBox></asp:Label>
+                </div>
+            </div>
+
             <div class="form-group row">
             <div class="col-md-2">
                 <asp:Label ID="LabelFiltro" runat="server" Text="FILTRO"></asp:Label>

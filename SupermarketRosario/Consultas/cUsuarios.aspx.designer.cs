@@ -13,6 +13,42 @@ namespace SupermarketRosario.Consultas {
     public partial class cUsuarios {
         
         /// <summary>
+        /// Desde control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Desde;
+        
+        /// <summary>
+        /// DesdeFecha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DesdeFecha;
+        
+        /// <summary>
+        /// Hasta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Hasta;
+        
+        /// <summary>
+        /// HastaFecha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox HastaFecha;
+        
+        /// <summary>
         /// LabelFiltro control.
         /// </summary>
         /// <remarks>

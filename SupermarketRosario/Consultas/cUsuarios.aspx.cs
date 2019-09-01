@@ -15,7 +15,11 @@ namespace SupermarketRosario.Consultas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Page.IsPostBack)
+            {
+                DesdeFecha.Text = DateTime.Today.ToString("yyyy-MM-dd");
+                HastaFecha.Text = DateTime.Today.ToString("yyyy-MM-dd");
+            }
         }
 
         protected void BuscarButton_Click(object sender, EventArgs e)
@@ -23,22 +27,24 @@ namespace SupermarketRosario.Consultas
             Expression<Func<Usuarios, bool>> filtros = x => true;
             RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
 
+            DateTime Desde = Utils.ToDateTime(DesdeFecha.Text);
+            DateTime Hasta = Utils.ToDateTime(HastaFecha.Text);
 
             int id;
             id = Utils.ToInt(CriterioTextBox.Text);
             switch (FiltroDropDown.SelectedIndex)
             {
                 case 0: //ID                  
-                    filtros = c => c.UsuarioId == id;
+                    filtros = c => c.UsuarioId == id && c.FechaCreacion >= Desde && c.FechaCreacion <= Hasta;
                     break;
                 case 1: //Usuario
-                    filtros = c => c.Usuario.Contains(CriterioTextBox.Text);
+                    filtros = c => c.Usuario.Contains(CriterioTextBox.Text) && c.FechaCreacion >= Desde && c.FechaCreacion <= Hasta;
                     break;
                 case 2: //Nombres
-                    filtros = c => c.Nombres.Contains(CriterioTextBox.Text);
+                    filtros = c => c.Nombres.Contains(CriterioTextBox.Text) && c.FechaCreacion >= Desde && c.FechaCreacion <= Hasta;
                     break;
                 case 3: //Email
-                    filtros = c => c.Email.Contains(CriterioTextBox.Text);
+                    filtros = c => c.Email.Contains(CriterioTextBox.Text) && c.FechaCreacion >= Desde && c.FechaCreacion <= Hasta;
                     break;
                 case 4: //Todo
                     break;
