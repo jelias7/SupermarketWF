@@ -82,9 +82,17 @@ namespace SupermarketRosario.Registros
             usuarios.Usuario = usuario.Text;
             usuarios.Clave = Eramake.eCryptography.Encrypt(clave.Text);
             usuarios.Email = email.Text;
-            usuarios.FechaCreacion = Convert.ToDateTime(fecha.Text);
+            usuarios.FechaCreacion = Utils.ToDateTime(fecha.Text);
 
             return usuarios;
+        }
+        private bool ClavesCoinciden()
+        {
+            bool paso = true;
+
+            if (clave.Text != confirmar.Text) { MostrarMensaje(TiposMensaje.Warning, "Las claves no coinciden."); paso = false; }
+
+            return paso;
         }
         public static bool RepetirUser(string descripcion)
         {
@@ -133,17 +141,6 @@ namespace SupermarketRosario.Registros
             }
             return paso;
         }
-        private bool Validar()
-        {
-            bool paso = true;
-
-            if (string.IsNullOrWhiteSpace(id.Text) || string.IsNullOrWhiteSpace(nombres.Text) || string.IsNullOrWhiteSpace(usuario.Text) || string.IsNullOrWhiteSpace(clave.Text) || string.IsNullOrWhiteSpace(email.Text) || confirmar.Text != clave.Text || string.IsNullOrWhiteSpace(fecha.Text))
-            {
-                MostrarMensaje(TiposMensaje.Error, "Llene correctamente todo!");
-                paso = false;
-            }
-            return paso;
-        }
         protected void NuevoButton_Click(object sender, EventArgs e)
         {
             Response.Redirect(Request.RawUrl);
@@ -156,7 +153,7 @@ namespace SupermarketRosario.Registros
 
             bool paso = false;
 
-            if (!Validar())
+            if (!ClavesCoinciden())
                 return;
 
             usuarios = LlenaClase();

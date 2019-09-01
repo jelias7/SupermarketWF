@@ -40,6 +40,15 @@ namespace SupermarketRosario.Registros {
         protected global::System.Web.UI.WebControls.TextBox nombres;
         
         /// <summary>
+        /// RFVNombres control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVNombres;
+        
+        /// <summary>
         /// email control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,24 @@ namespace SupermarketRosario.Registros {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox email;
+        
+        /// <summary>
+        /// RFVEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVEmail;
+        
+        /// <summary>
+        /// REVEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REVEmail;
         
         /// <summary>
         /// usuario control.
@@ -58,6 +85,15 @@ namespace SupermarketRosario.Registros {
         protected global::System.Web.UI.WebControls.TextBox usuario;
         
         /// <summary>
+        /// RFVUsuario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVUsuario;
+        
+        /// <summary>
         /// clave control.
         /// </summary>
         /// <remarks>
@@ -65,6 +101,15 @@ namespace SupermarketRosario.Registros {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox clave;
+        
+        /// <summary>
+        /// RFVClave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVClave;
         
         /// <summary>
         /// confirmar control.
@@ -76,6 +121,15 @@ namespace SupermarketRosario.Registros {
         protected global::System.Web.UI.WebControls.TextBox confirmar;
         
         /// <summary>
+        /// RFVConfirmar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVConfirmar;
+        
+        /// <summary>
         /// fecha control.
         /// </summary>
         /// <remarks>
@@ -83,6 +137,15 @@ namespace SupermarketRosario.Registros {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox fecha;
+        
+        /// <summary>
+        /// RFVFecha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVFecha;
         
         /// <summary>
         /// Error control.
