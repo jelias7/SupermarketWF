@@ -6,8 +6,8 @@
         <div class="panel-body">
             <div class="form-group row">
             <div class="col-md-2">
-                <asp:Label ID="Labels" runat="server" Text="FILTRO"></asp:Label>
-                    <asp:DropDownList ID="filtro" runat="server" CssClass="form-control input-sm" >
+                <asp:Label ID="LabelFiltro" runat="server" Text="FILTRO"></asp:Label>
+                    <asp:DropDownList ID="FiltroDropDown" runat="server" CssClass="form-control input-sm" >
                         <asp:ListItem>ID</asp:ListItem>
                         <asp:ListItem>Usuario</asp:ListItem>
                         <asp:ListItem>Nombres</asp:ListItem>
@@ -19,8 +19,8 @@
 
             <div class="form-group row">
                 <div class="col-md-6">
-                    <asp:Label ID="Label" runat="server" Text="CRITERIO"></asp:Label>
-                    <asp:TextBox ID="criterio" runat="server" CssClass="form-control input-sm"></asp:TextBox>
+                    <asp:Label ID="LabelCriterio" runat="server" Text="CRITERIO"></asp:Label>
+                    <asp:TextBox ID="CriterioTextBox" runat="server" CssClass="form-control input-sm"></asp:TextBox>
                 </div>
             </div>
 

@@ -25,20 +25,20 @@ namespace SupermarketRosario.Consultas
 
 
             int id;
-            id = Utils.ToInt(criterio.Text);
-            switch (filtro.SelectedIndex)
+            id = Utils.ToInt(CriterioTextBox.Text);
+            switch (FiltroDropDown.SelectedIndex)
             {
                 case 0: //ID                  
                     filtros = c => c.UsuarioId == id;
                     break;
                 case 1: //Usuario
-                    filtros = c => c.Usuario.Contains(criterio.Text);
+                    filtros = c => c.Usuario.Contains(CriterioTextBox.Text);
                     break;
                 case 2: //Nombres
-                    filtros = c => c.Nombres.Contains(criterio.Text);
+                    filtros = c => c.Nombres.Contains(CriterioTextBox.Text);
                     break;
                 case 3: //Email
-                    filtros = c => c.Email.Contains(criterio.Text);
+                    filtros = c => c.Email.Contains(CriterioTextBox.Text);
                     break;
                 case 4: //Todo
                     break;

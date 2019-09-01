@@ -13,40 +13,40 @@ namespace SupermarketRosario.Consultas {
     public partial class cUsuarios {
         
         /// <summary>
-        /// Labels control.
+        /// LabelFiltro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Labels;
+        protected global::System.Web.UI.WebControls.Label LabelFiltro;
         
         /// <summary>
-        /// filtro control.
+        /// FiltroDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList filtro;
+        protected global::System.Web.UI.WebControls.DropDownList FiltroDropDown;
         
         /// <summary>
-        /// Label control.
+        /// LabelCriterio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label;
+        protected global::System.Web.UI.WebControls.Label LabelCriterio;
         
         /// <summary>
-        /// criterio control.
+        /// CriterioTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox criterio;
+        protected global::System.Web.UI.WebControls.TextBox CriterioTextBox;
         
         /// <summary>
         /// BuscarButton control.
