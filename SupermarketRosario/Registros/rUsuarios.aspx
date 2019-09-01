@@ -9,7 +9,7 @@
                 <div class="form-group row">
                     <label for="ID" class="col-sm-1 col-form-label">ID</label>
                     <div class="col-md-1 col-sm-2 col-xs-4">
-                        <asp:TextBox type="number" ID="id" runat="server" min=0 class="form-control input-sm"></asp:TextBox>
+                        <asp:TextBox type="number" ID="IDTextBox" runat="server" min=0 class="form-control input-sm"></asp:TextBox>
                     </div>
                     <div class="col-md-1 col-sm-2 col-xs-4">
                          <asp:LinkButton ID="BuscarButton" CssClass="btn btn-info btn-block btn-sm text-center" CausesValidation="False" runat="server" Text="Search" OnClick="BuscarButton_Click"></asp:LinkButton>
@@ -19,49 +19,49 @@
                 <div class="form-group row">
                     <label for="Nombres" class="col-sm-1 col-form-label">Nombres</label>
                     <div class="col-md-8">
-                        <asp:TextBox ID="nombres" runat="server" Class="form-control input-sm"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RFVNombres" runat="server" MaxLength="200" ControlToValidate="nombres" ErrorMessage="Campo obligatorio" ForeColor="Black" Display="Dynamic" SetFocusOnError="True" ToolTip="Campo obligatorio"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="NombresTextBox" runat="server" Class="form-control input-sm"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RFVNombres" runat="server" MaxLength="200" ControlToValidate="NombresTextBox" ErrorMessage="Campo obligatorio" ForeColor="Black" Display="Dynamic" SetFocusOnError="True" ToolTip="Campo obligatorio"></asp:RequiredFieldValidator>
                     </div>
                 </div>
                 <%--Email--%>
                 <div class="form-group row">
                     <label for="Email" class="col-sm-1 col-form-label">Email</label>
                     <div class="col-md-8">
-                        <asp:TextBox ID="email" runat="server" Class="form-control input-sm" placeholder="ejemplo@email.com"></asp:TextBox>
-                         <asp:RequiredFieldValidator ID="RFVEmail" runat="server" MaxLength="200" ControlToValidate="email" ErrorMessage="Campo obligatorio" ForeColor="Black" Display="Dynamic" SetFocusOnError="True" ToolTip="Campo obligatorio"></asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="REVEmail" runat="server" ControlToValidate="email" ErrorMessage="Ajustese al formato especificado." ForeColor="Black" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{1,5})$"></asp:RegularExpressionValidator>
+                        <asp:TextBox ID="EmailTextBox" runat="server" Class="form-control input-sm" placeholder="ejemplo@email.com"></asp:TextBox>
+                         <asp:RequiredFieldValidator ID="RFVEmail" runat="server" MaxLength="200" ControlToValidate="EmailTextBox" ErrorMessage="Campo obligatorio" ForeColor="Black" Display="Dynamic" SetFocusOnError="True" ToolTip="Campo obligatorio"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="REVEmail" runat="server" ControlToValidate="EmailTextBox" ErrorMessage="Ajustese al formato especificado." ForeColor="Black" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{1,5})$"></asp:RegularExpressionValidator>
                     </div>
                 </div>
                 <%--Usuario--%>
                 <div class="form-group row">
-                    <label for="usuario" class="col-sm-1 col-form-label">Usuario</label>
+                    <label for="Usuario" class="col-sm-1 col-form-label">Usuario</label>
                     <div class="col-md-8">
-                        <asp:TextBox ID="usuario" runat="server" Class="form-control input-sm"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RFVUsuario" runat="server" MaxLength="200" ControlToValidate="usuario" ErrorMessage="Campo obligatorio" ForeColor="Black" Display="Dynamic" SetFocusOnError="True" ToolTip="Campo obligatorio"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="UsuarioTextBox" runat="server" Class="form-control input-sm"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RFVUsuario" runat="server" MaxLength="200" ControlToValidate="UsuarioTextBox" ErrorMessage="Campo obligatorio" ForeColor="Black" Display="Dynamic" SetFocusOnError="True" ToolTip="Campo obligatorio"></asp:RequiredFieldValidator>
                     </div>
                 </div>
                  <%--Clave--%>
                 <div class="form-group row">
-                    <label for="clave" class="col-sm-1 col-form-label">Clave</label>
+                    <label for="Clave" class="col-sm-1 col-form-label">Clave</label>
                     <div class="col-md-8">
-                        <asp:TextBox type="password" ID="clave" runat="server" Class="form-control input-sm"></asp:TextBox>   
-                         <asp:RequiredFieldValidator ID="RFVClave" runat="server" MaxLength="200" ControlToValidate="clave" ErrorMessage="Campo obligatorio" ForeColor="Black" Display="Dynamic" SetFocusOnError="True" ToolTip="Campo obligatorio"></asp:RequiredFieldValidator>
+                        <asp:TextBox type="password" ID="ClaveTextBox" runat="server" Class="form-control input-sm"></asp:TextBox>   
+                         <asp:RequiredFieldValidator ID="RFVClave" runat="server" MaxLength="200" ControlToValidate="ClaveTextBox" ErrorMessage="Campo obligatorio" ForeColor="Black" Display="Dynamic" SetFocusOnError="True" ToolTip="Campo obligatorio"></asp:RequiredFieldValidator>
                     </div>
                 </div>
                 <%--Confirmar--%>
                 <div class="form-group row">
-                    <label for="clave" class="col-sm-1 col-form-label">Confirmar</label>
+                    <label for="Confirmar" class="col-sm-1 col-form-label">Confirmar</label>
                     <div class="col-md-8">
-                        <asp:TextBox type="password" ID="confirmar" runat="server" Class="form-control input-sm"></asp:TextBox>    
-                        <asp:RequiredFieldValidator ID="RFVConfirmar" runat="server" MaxLength="200" ControlToValidate="confirmar" ErrorMessage="Campo obligatorio" ForeColor="Black" Display="Dynamic" SetFocusOnError="True" ToolTip="Campo obligatorio"></asp:RequiredFieldValidator>
+                        <asp:TextBox type="password" ID="ConfirmarTextBox" runat="server" Class="form-control input-sm"></asp:TextBox>    
+                        <asp:RequiredFieldValidator ID="RFVConfirmar" runat="server" MaxLength="200" ControlToValidate="ConfirmarTextBox" ErrorMessage="Campo obligatorio" ForeColor="Black" Display="Dynamic" SetFocusOnError="True" ToolTip="Campo obligatorio"></asp:RequiredFieldValidator>
                     </div>
                 </div>
                 <%--Fecha--%>
                 <div class="form-group row">
-                    <label for="fecha" class="col-sm-1 col-form-label">Fecha</label>
+                    <label for="Fecha" class="col-sm-1 col-form-label">Fecha</label>
                     <div class="col-md-8">
-                        <asp:TextBox ID="fecha" type="date" runat="server" Class="form-control input-sm"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RFVFecha" runat="server" MaxLength="200" ControlToValidate="fecha" ErrorMessage="Campo obligatorio" ForeColor="Black" Display="Dynamic" SetFocusOnError="True" ToolTip="Campo obligatorio"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="FechaTextBox" type="date" runat="server" Class="form-control input-sm"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RFVFecha" runat="server" MaxLength="200" ControlToValidate="FechaTextBox" ErrorMessage="Campo obligatorio" ForeColor="Black" Display="Dynamic" SetFocusOnError="True" ToolTip="Campo obligatorio"></asp:RequiredFieldValidator>
                     </div>
                 </div>
             </div>

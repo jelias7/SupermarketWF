@@ -13,13 +13,13 @@ namespace SupermarketRosario.Registros {
     public partial class rUsuarios {
         
         /// <summary>
-        /// id control.
+        /// IDTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox id;
+        protected global::System.Web.UI.WebControls.TextBox IDTextBox;
         
         /// <summary>
         /// BuscarButton control.
@@ -31,13 +31,13 @@ namespace SupermarketRosario.Registros {
         protected global::System.Web.UI.WebControls.LinkButton BuscarButton;
         
         /// <summary>
-        /// nombres control.
+        /// NombresTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nombres;
+        protected global::System.Web.UI.WebControls.TextBox NombresTextBox;
         
         /// <summary>
         /// RFVNombres control.
@@ -49,13 +49,13 @@ namespace SupermarketRosario.Registros {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVNombres;
         
         /// <summary>
-        /// email control.
+        /// EmailTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox email;
+        protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
         
         /// <summary>
         /// RFVEmail control.
@@ -76,13 +76,13 @@ namespace SupermarketRosario.Registros {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator REVEmail;
         
         /// <summary>
-        /// usuario control.
+        /// UsuarioTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox usuario;
+        protected global::System.Web.UI.WebControls.TextBox UsuarioTextBox;
         
         /// <summary>
         /// RFVUsuario control.
@@ -94,13 +94,13 @@ namespace SupermarketRosario.Registros {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVUsuario;
         
         /// <summary>
-        /// clave control.
+        /// ClaveTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox clave;
+        protected global::System.Web.UI.WebControls.TextBox ClaveTextBox;
         
         /// <summary>
         /// RFVClave control.
@@ -112,13 +112,13 @@ namespace SupermarketRosario.Registros {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVClave;
         
         /// <summary>
-        /// confirmar control.
+        /// ConfirmarTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox confirmar;
+        protected global::System.Web.UI.WebControls.TextBox ConfirmarTextBox;
         
         /// <summary>
         /// RFVConfirmar control.
@@ -130,13 +130,13 @@ namespace SupermarketRosario.Registros {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVConfirmar;
         
         /// <summary>
-        /// fecha control.
+        /// FechaTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fecha;
+        protected global::System.Web.UI.WebControls.TextBox FechaTextBox;
         
         /// <summary>
         /// RFVFecha control.

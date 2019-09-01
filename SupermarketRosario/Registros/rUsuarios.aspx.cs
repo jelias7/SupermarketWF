@@ -17,14 +17,15 @@ namespace SupermarketRosario.Registros
         {
             if (!Page.IsPostBack)
             {
-                fecha.Text = DateTime.Today.ToString("yyyy-MM-dd");
-                id.Text = "0";
+                FechaTextBox.Text = DateTime.Today.ToString("yyyy-MM-dd");
+                IDTextBox.Text = "0";
 
-                int idx = Utils.ToInt(Request.QueryString["id"]);
-                if (idx > 0)
+                int ID = Utils.ToInt(Request.QueryString["id"]);
+
+                if (ID > 0)
                 {
                     BLL.RepositorioBase<Usuarios> repositorio = new BLL.RepositorioBase<Usuarios>();
-                    var us = repositorio.Buscar(idx);
+                    var us = repositorio.Buscar(ID);
 
                     if (us == null)
                     {
@@ -39,28 +40,28 @@ namespace SupermarketRosario.Registros
         }
         private void Limpiar()
         {
-            id.Text = "0";
-            nombres.Text = string.Empty;
-            usuario.Text = string.Empty;
-            clave.Text = string.Empty;
-            confirmar.Text = string.Empty;
-            email.Text = string.Empty;
-            fecha.Text = DateTime.Today.ToString("yyyy-MM-dd");
+            IDTextBox.Text = "0";
+            NombresTextBox.Text = string.Empty;
+            UsuarioTextBox.Text = string.Empty;
+            ClaveTextBox.Text = string.Empty;
+            ConfirmarTextBox.Text = string.Empty;
+            EmailTextBox.Text = string.Empty;
+            FechaTextBox.Text = DateTime.Today.ToString("yyyy-MM-dd");
         }
         private void LlenaCampo(Usuarios usuarios)
         {
-            id.Text = Convert.ToString(usuarios.UsuarioId);
-            nombres.Text = usuarios.Nombres;
-            usuario.Text = usuarios.Usuario;
-            clave.Text = Eramake.eCryptography.Decrypt(usuarios.Clave);
-            confirmar.Text = Eramake.eCryptography.Decrypt(usuarios.Clave);
-            email.Text = usuarios.Email;
-            fecha.Text = usuarios.FechaCreacion.ToString("yyyy-MM-dd");
+            IDTextBox.Text = Convert.ToString(usuarios.UsuarioId);
+            NombresTextBox.Text = usuarios.Nombres;
+            UsuarioTextBox.Text = usuarios.Usuario;
+            ClaveTextBox.Text = Eramake.eCryptography.Decrypt(usuarios.Clave);
+            ConfirmarTextBox.Text = Eramake.eCryptography.Decrypt(usuarios.Clave);
+            EmailTextBox.Text = usuarios.Email;
+            FechaTextBox.Text = usuarios.FechaCreacion.ToString("yyyy-MM-dd");
         }
         private bool ExisteEnLaBaseDeDatos()
         {
             RepositorioBase<Usuarios> Repositorio = new RepositorioBase<Usuarios>();
-            Usuarios usuarios = Repositorio.Buscar(Convert.ToInt32(id.Text));
+            Usuarios usuarios = Repositorio.Buscar(Convert.ToInt32(IDTextBox.Text));
             return (usuarios != null);
         }
         void MostrarMensaje(TiposMensaje tipo, string mensaje)
@@ -77,12 +78,12 @@ namespace SupermarketRosario.Registros
         private Usuarios LlenaClase()
         {
             Usuarios usuarios = new Usuarios();
-            usuarios.UsuarioId = Utils.ToInt(id.Text);
-            usuarios.Nombres = nombres.Text;
-            usuarios.Usuario = usuario.Text;
-            usuarios.Clave = Eramake.eCryptography.Encrypt(clave.Text);
-            usuarios.Email = email.Text;
-            usuarios.FechaCreacion = Utils.ToDateTime(fecha.Text);
+            usuarios.UsuarioId = Utils.ToInt(IDTextBox.Text);
+            usuarios.Nombres = NombresTextBox.Text;
+            usuarios.Usuario = UsuarioTextBox.Text;
+            usuarios.Clave = Eramake.eCryptography.Encrypt(ClaveTextBox.Text);
+            usuarios.Email = EmailTextBox.Text;
+            usuarios.FechaCreacion = Utils.ToDateTime(FechaTextBox.Text);
 
             return usuarios;
         }
@@ -90,7 +91,7 @@ namespace SupermarketRosario.Registros
         {
             bool paso = true;
 
-            if (clave.Text != confirmar.Text) { MostrarMensaje(TiposMensaje.Warning, "Las claves no coinciden."); paso = false; }
+            if (ClaveTextBox.Text != ConfirmarTextBox.Text) { MostrarMensaje(TiposMensaje.Warning, "Las claves no coinciden."); paso = false; }
 
             return paso;
         }
@@ -134,7 +135,7 @@ namespace SupermarketRosario.Registros
         {
             bool paso = true;
 
-            if (RepetirUser(usuario.Text) || RepetirEmail(email.Text))
+            if (RepetirUser(UsuarioTextBox.Text) || RepetirEmail(EmailTextBox.Text))
             {
                 MostrarMensaje(TiposMensaje.Warning, "Ya existe ese!");
                 paso = false;
@@ -157,7 +158,7 @@ namespace SupermarketRosario.Registros
                 return;
 
             usuarios = LlenaClase();
-            if (Utils.ToInt(id.Text) == 0)
+            if (Utils.ToInt(IDTextBox.Text) == 0)
             {
                 if (!ValidarRepetir())
                     return;
@@ -191,10 +192,10 @@ namespace SupermarketRosario.Registros
         {
             RepositorioBase<Usuarios> Repositorio = new RepositorioBase<Usuarios>();
 
-            var usuario = Repositorio.Buscar(Utils.ToInt(id.Text));
+            var usuario = Repositorio.Buscar(Utils.ToInt(IDTextBox.Text));
             if (usuario != null)
             {
-                if (Repositorio.Eliminar(Utils.ToInt(id.Text)))
+                if (Repositorio.Eliminar(Utils.ToInt(IDTextBox.Text)))
                 {
                     MostrarMensaje(TiposMensaje.Success, "Exito!");
                     Limpiar();
@@ -211,7 +212,7 @@ namespace SupermarketRosario.Registros
             RepositorioBase<Usuarios> Repositorio = new RepositorioBase<Usuarios>();
             Usuarios usuarios = new Usuarios();
 
-            usuarios = Repositorio.Buscar(Utils.ToInt(id.Text));
+            usuarios = Repositorio.Buscar(Utils.ToInt(IDTextBox.Text));
             if (usuarios != null)
                 LlenaCampo(usuarios);
             else
